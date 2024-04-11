@@ -22,6 +22,7 @@ class Cube:
             line.draw_line()
             
     def points_transformation(self, tranfromation_matrix):
+        # print(tranfromation_matrix)
         for point in self.points:
             point.get_transformation(tranfromation_matrix)
             

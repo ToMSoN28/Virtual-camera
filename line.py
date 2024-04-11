@@ -22,7 +22,7 @@ class Line:
         return m
         
     def draw_line(self):
-        if not (self.start.z < 0 or self.end.z < 0):
+        if not (self.start.z < -1000 or self.end.z < -1000):
             s_width, s_height = self.screen.get_size()
             start_vertical_matrix = self.start.xyz_to_matrix()
             
