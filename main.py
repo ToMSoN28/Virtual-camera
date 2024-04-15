@@ -114,15 +114,25 @@ def main():
                     for cube in cubes:
                         cube.points_transformation(t_m)
                 if event.key == pg.K_i:
+                    # t_m = multi_matrix(t_m, tm.translation_matrix(-S_WIDTH, -S_HEIGHT, 0))
+                    t_m = multi_matrix(t_m, tm.zoom_matrix(1.2))
                     for cube in cubes:
-                        # cube.points_transformation(tm.translation_matrix(0, -S_HEIGHT*1, 0))
-                        cube.zoom_transformation(1.2)
-                        # cube.points_transformation(tm.translation_matrix(0, S_HEIGHT*1, 0))
+                        cube.points_transformation(t_m)
+                        # cube.zoom_transformation(1.2)
+                    # t_m = multi_matrix(t_m, tm.translation_matrix(S_WIDTH, S_HEIGHT, 0))
+                    # for cube in cubes:
+                        # cube.points_transformation(t_m)
                 if event.key == pg.K_o:
+                    # t_m = multi_matrix(t_m, tm.translation_matrix(-S_WIDTH, -S_HEIGHT, 0))
+                    t_m = multi_matrix(t_m, tm.zoom_matrix(0.8))
+                    # t_m = multi_matrix(t_m, tm.translation_matrix(S_WIDTH, S_HEIGHT, 0))
                     for cube in cubes:
-                        # cube.points_transformation(tm.translation_matrix(0, -S_HEIGHT*1, 0))
-                        cube.zoom_transformation(0.8)
-                        # cube.points_transformation(tm.translation_matrix(0, S_HEIGHT*1, 0))
+                        cube.points_transformation(t_m)
+                        # cube.zoom_transformation(0.8)
+                    # t_m = multi_matrix(t_m, tm.translation_matrix(S_WIDTH, S_HEIGHT, 0))
+                    # for cube in cubes:
+                    #     cube.points_transformation(t_m)
+                        
                     
             elif event.type == pg.QUIT:
                 dispaly = False

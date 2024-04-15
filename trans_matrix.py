@@ -39,5 +39,12 @@ class TransformationMatrix:
         ])
         return m
     
-    
+    def zoom_matrix(self, zoom):
+        m  = np.matrix([
+            [zoom,0,0,0],
+            [0,zoom,0,0],
+            [0,0,zoom,0],
+            [0,0,0,1]
+        ])
+        return m
         

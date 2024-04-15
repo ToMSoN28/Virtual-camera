@@ -34,9 +34,9 @@ class Point:
         self.x_init = self.x_init*value
         self.y_init = self.y_init*value
         self.z_init = self.z_init*value
-        self.x = self.x*value
-        self.y = self.y*value
-        self.z = self.z*value
+        # self.x = self.x*value
+        # self.y = self.y*value
+        # self.z = self.z*value
         
     # def translation_matrix(self, tx, ty, tz):
     #     m = np.matrix([
