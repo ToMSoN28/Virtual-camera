@@ -28,11 +28,11 @@ class Line:
             
             projection = np.dot(self.get_projection_matrix(), start_vertical_matrix)
             start_x = ((self.start.x * self.D) / (self.start.z + self.D)) + s_width/2
-            start_y = ((self.start.y * self.D) / (self.start.z + self.D)) - s_height/2
+            start_y = ((self.start.y * self.D) / (self.start.z + self.D)) + s_height/2
             end_vertical_matrix = self.end.xyz_to_matrix()
             projection = np.dot(self.get_projection_matrix(), end_vertical_matrix)
             end_x = ((self.end.x * self.D) / (self.end.z + self.D)) + s_width/2
-            end_y = ((self.end.y * self.D) / (self.end.z + self.D)) - s_height/2
+            end_y = ((self.end.y * self.D) / (self.end.z + self.D)) + s_height/2
             pg.draw.circle(self.screen, self.BLACK,(start_x, start_y), 2, 2)
             pg.draw.circle(self.screen, self.BLACK,(end_x, end_y), 2, 2)
             pg.draw.line(self.screen, self.color, (start_x, start_y), (end_x, end_y))

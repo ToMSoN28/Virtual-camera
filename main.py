@@ -100,16 +100,16 @@ def main():
                     for cube in cubes:
                         cube.points_transformation(t_m)
                 if event.key == pg.K_LEFT:
-                    t_m = multi_matrix(t_m, tm.translation_matrix(0, -S_HEIGHT*1, 1000))
+                    t_m = multi_matrix(t_m, tm.translation_matrix(0, -S_HEIGHT*0, 1000))
                     t_m = multi_matrix(t_m, tm.z_rotation_matrix(RADIOUS))
-                    t_m = multi_matrix(t_m, tm.translation_matrix(0, S_HEIGHT*1, -1000))
+                    t_m = multi_matrix(t_m, tm.translation_matrix(0, S_HEIGHT*0, -1000))
                     print(t_m)
                     for cube in cubes:
                         cube.points_transformation(t_m)
                 if event.key == pg.K_RIGHT:
-                    t_m = multi_matrix(t_m, tm.translation_matrix(0, -S_HEIGHT*1, 1000))
+                    t_m = multi_matrix(t_m, tm.translation_matrix(0, -S_HEIGHT*0, 1000))
                     t_m = multi_matrix(t_m, tm.z_rotation_matrix(-RADIOUS))
-                    t_m = multi_matrix(t_m, tm.translation_matrix(0, S_HEIGHT*1, -1000))
+                    t_m = multi_matrix(t_m, tm.translation_matrix(0, S_HEIGHT*0, -1000))
                     print(t_m)
                     for cube in cubes:
                         cube.points_transformation(t_m)
