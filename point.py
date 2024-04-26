@@ -11,6 +11,8 @@ class Point:
         self.x_init = x
         self.y_init = y
         self.z_init = z
+
+        self.zoom = 1.0
     
     def xyz_to_matrix(self):
         horizontal_m = np.matrix([self.x, self.y, self.z, 1])
@@ -25,15 +27,19 @@ class Point:
     def get_transformation(self, transtormation_matrix):
         vertical_m = self.xyz_to_matrix1()
         new_positon = np.dot(transtormation_matrix, vertical_m)
-        self.x = int(new_positon[0][0])
-        self.y = int(new_positon[1][0])
-        self.z = int(new_positon[2][0])
+        self.x = int(new_positon[0][0]*self.zoom)
+        self.y = int(new_positon[1][0]*self.zoom)
+        self.z = int(new_positon[2][0]*self.zoom)
         
     def zoom_transformation(self, value):
-        
-        self.x_init = self.x_init*value
-        self.y_init = self.y_init*value
-        self.z_init = self.z_init*value
+
+        self.zoom = self.zoom*value
+        print(self.zoom)
+
+        # self.x_init = self.x_init*value
+        # self.y_init = self.y_init*value
+        # self.z_init = self.z_init*value
+
         # self.x = self.x*value
         # self.y = self.y*value
         # self.z = self.z*value
