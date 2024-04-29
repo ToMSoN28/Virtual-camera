@@ -62,84 +62,84 @@ def main():
                 # screen.fill(GRAY)
                 if event.key == pg.K_a:
                     t_m = multi_matrix(t_m, tm.translation_matrix(STEP, 0, 0))
-                    print(t_m)
+                    # print(t_m)
                     for cube in cubes:
                         cube.points_transformation(multi_matrix(t_m, v_m))
                 if event.key == pg.K_d:
                     t_m = multi_matrix(t_m, tm.translation_matrix(-STEP, 0, 0))
-                    print(t_m)
+                    # print(t_m)
                     for cube in cubes:
                         cube.points_transformation(multi_matrix(t_m, v_m))
                 if event.key == pg.K_w:
                     t_m = multi_matrix(t_m, tm.translation_matrix(0, STEP, 0))
-                    print(t_m)
+                    # print(t_m)
                     for cube in cubes:
                         cube.points_transformation(multi_matrix(t_m, v_m))
                 if event.key == pg.K_s:
                     t_m = multi_matrix(t_m, tm.translation_matrix(0, -STEP, 0))
-                    print(t_m)
+                    # print(t_m)
                     for cube in cubes:
                         cube.points_transformation(multi_matrix(t_m, v_m))
                 if event.key == pg.K_UP:
                     t_m = multi_matrix(t_m, tm.translation_matrix(0, 0, STEP))
-                    print(t_m)
+                    # print(t_m)
                     for cube in cubes:
                         cube.points_transformation(multi_matrix(t_m, v_m))
                 if event.key == pg.K_DOWN:
                     t_m = multi_matrix(t_m, tm.translation_matrix(0, 0, -STEP))
-                    print(t_m)
+                    # print(t_m)
                     for cube in cubes:
                         cube.points_transformation(multi_matrix(t_m, v_m))
                 if event.key == pg.K_z:
                     t_m = multi_matrix(t_m, tm.translation_matrix(0, -S_HEIGHT*0, -1000))
                     t_m = multi_matrix(t_m, tm.x_rotation_matrix(RADIOUS))
                     t_m = multi_matrix(t_m, tm.translation_matrix(0, S_HEIGHT*0, 1000))
-                    print(t_m)
+                    # print(t_m)
                     for cube in cubes:
                         cube.points_transformation(multi_matrix(t_m, v_m))
                 if event.key == pg.K_c:
                     t_m = multi_matrix(t_m, tm.translation_matrix(0, -S_HEIGHT*0, -1000))
                     t_m = multi_matrix(t_m, tm.x_rotation_matrix(-RADIOUS))
                     t_m = multi_matrix(t_m, tm.translation_matrix(0, S_HEIGHT*0, 1000))
-                    print(t_m)
+                    # print(t_m)
                     for cube in cubes:
                         cube.points_transformation(multi_matrix(t_m, v_m))
                 if event.key == pg.K_e:
                     t_m = multi_matrix(t_m, tm.translation_matrix(0, -S_HEIGHT*0, -1000))
                     t_m = multi_matrix(t_m, tm.y_rotation_matrix(RADIOUS))
                     t_m = multi_matrix(t_m, tm.translation_matrix(0, S_HEIGHT*0, 1000))
-                    print(t_m)
+                    # print(t_m)
                     for cube in cubes:
                         cube.points_transformation(multi_matrix(t_m, v_m))
                 if event.key == pg.K_q:
                     t_m = multi_matrix(t_m, tm.translation_matrix(0, -S_HEIGHT*0, -1000))
                     t_m = multi_matrix(t_m, tm.y_rotation_matrix(-RADIOUS))
                     t_m = multi_matrix(t_m, tm.translation_matrix(0, S_HEIGHT*0, 1000))
-                    print(t_m)
+                    # print(t_m)
                     for cube in cubes:
                         cube.points_transformation(multi_matrix(t_m, v_m))
                 if event.key == pg.K_LEFT:
                     # t_m = multi_matrix(t_m, tm.translation_matrix(0, -S_HEIGHT*0, 1000))
                     t_m = multi_matrix(t_m, tm.z_rotation_matrix(RADIOUS))
                     # t_m = multi_matrix(t_m, tm.translation_matrix(0, S_HEIGHT*0, -1000))
-                    print(t_m)
+                    # print(t_m)
                     for cube in cubes:
                         cube.points_transformation(multi_matrix(t_m, v_m))
                 if event.key == pg.K_RIGHT:
                     # t_m = multi_matrix(t_m, tm.translation_matrix(0, -S_HEIGHT*0, 1000))
                     t_m = multi_matrix(t_m, tm.z_rotation_matrix(-RADIOUS))
                     # t_m = multi_matrix(t_m, tm.translation_matrix(0, S_HEIGHT*0, -1000))
-                    print(t_m)
+                    # print(t_m)
                     for cube in cubes:
                         cube.points_transformation(multi_matrix(t_m, v_m))
                 if event.key == pg.K_n:
                     t_m = multi_matrix(t_m, tm.translation_matrix(-S_WIDTH*1, -S_HEIGHT*0, 0))
-                    print(t_m)
+                    # print(t_m)
                     for cube in cubes:
                         cube.points_transformation(multi_matrix(t_m, v_m))
                 if event.key == pg.K_m:
                     t_m = multi_matrix(t_m, tm.translation_matrix(S_WIDTH*1, S_HEIGHT*0, 0))
-                    print(t_m)
+                    # print(t_m)
                     for cube in cubes:
                         cube.points_transformation(t_m)
                 if event.key == pg.K_o:
